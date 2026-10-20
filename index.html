@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>carmouraa ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>little art club ♡</h1>
+    <p class="subtitle">draw anything ⋆౨ৎ˚⟡˖</p>
+
+    <div class="toolbar">
+<label for="brushType">brush type</label>
+<select id="brushType">
+  <option value="soft">soft brush</option>
+  <option value="pencil">pencil</option>
+  <option value="marker">marker</option>
+  <option value="glitter">glitter</option>
+  <option value="rainbow">rainbow</option>
+  <option value="stamp">stamp brush</option>
+  <option value="pixel">pixel brush ▦</option>
+  <option value="dot">dot brush ·</option>
+  <option value="sparkle">sparkle brush ✧</option>
+  <option value="spray">spray brush</option>
+  <option value="watercolor">watercolor brush</option>
+</select>
+</label>
+
+      <label>color <input type="color" id="color" value="#ed83ac"></label>
+      <label>size <input type="range" id="size" min="1" max="45" value="7"></label>
+      <button id="eraser">⌫ eraser</button>
+      <button id="undo">↶ undo</button>
+      <button id="clear">✧ clear</button>
+    </div>
+
+    <div class="palette" id="palette"></div>
+
+    <div class="canvas-wrap">
+      <canvas id="canvas" width="900" height="600"></canvas>
+    </div>
+
+    <p class="hint">
+      gambar pakai mouse/tangan kamu ♡<br>
+    </p>
+
+    <button class="save" id="save">♡ download art as png ♡</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

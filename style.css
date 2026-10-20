@@ -1,0 +1,193 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 10% 10%, #f8c9da, transparent 35%),
+    radial-gradient(circle at 90% 90%, #cdddb1, transparent 38%),
+    #f8eee6;
+  color: #705b50;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.app {
+  max-width: 850px;
+  margin: auto;
+  padding: 22px;
+  text-align: center;
+  background: #fffaf3;
+  border: 3px solid white;
+  border-radius: 25px;
+  box-shadow: 0 12px 35px #a47d7620;
+}
+
+h1 {
+  margin: 5px 0;
+  color: #d9779b;
+  font-size: clamp(28px, 6vw, 42px);
+}
+
+.subtitle {
+  margin-bottom: 22px;
+  color: #a18c79;
+  font-size: 14px;
+}
+
+.toolbar,
+.stickers,
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  margin: 12px 0;
+}
+
+button,
+.toolbar label {
+  padding: 9px 12px;
+  border: 1px solid #ead3d9;
+  border-radius: 12px;
+  background: white;
+  color: #785f58;
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+  transition: transform .15s, background .15s;
+}
+
+button:hover {
+  background: #ffe3ed;
+  transform: translateY(-2px);
+}
+
+input[type="color"] {
+  width: 34px;
+  height: 28px;
+  border: 0;
+  vertical-align: middle;
+  background: transparent;
+}
+
+input[type="range"] {
+  width: 85px;
+  vertical-align: middle;
+}
+
+.swatch {
+  width: 27px;
+  height: 27px;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid white;
+  outline: 1px solid #e6d4d4;
+}
+
+.canvas-wrap {
+  padding: 7px;
+  background: #f4e1e7;
+  border-radius: 16px;
+}
+
+#canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: white;
+  border-radius: 10px;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.stickers button {
+  font-size: 22px;
+  padding: 5px 10px;
+}
+
+.hint {
+  margin: 18px 0;
+  color: #a28b83;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.save {
+  margin: 5px;
+  padding: 13px 22px;
+  border: none;
+  background: #df85a6;
+  color: white;
+  font-weight: 600;
+}
+
+.save:hover {
+  background: #cc6e93;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .app {
+    padding: 14px 10px;
+  }
+
+  .toolbar {
+    gap: 6px;
+  }
+
+  .toolbar label,
+  .toolbar button {
+    padding: 7px;
+    font-size: 12px;
+  }
+}
+
+.toolbar select {
+  max-width: 145px;
+  padding: 8px;
+  border: 1px solid #ead3d9;
+  border-radius: 10px;
+  background: #fffaf3;
+  color: #785f58;
+  font: inherit;
+  font-size: 12px;
+}
+
+#brushType:focus {
+  outline: 2px solid #edb0c7;
+}
+
+#canvas {
+  touch-action: none;
+}
+#brushType {
+  max-width: 100%;
+  padding: 9px 12px;
+  border: 2px solid #e8c8d8;
+  border-radius: 12px;
+  background: #fff8fc;
+  color: #79566b;
+  font: inherit;
+  cursor: pointer;
+}
+
+#brushType:focus {
+  outline: 2px solid #e7a9cb;
+  outline-offset: 2px;
+}
+
+canvas {
+  touch-action: none;
+}
